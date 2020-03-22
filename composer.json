@@ -1,0 +1,26 @@
+{
+    "name": "chatbox-inc/laravel-db",
+    "authors": [
+        {
+            "name": "mikakane",
+            "email": "t.goto@chatbox-inc.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Chatbox\\Laravel\\Database\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Chatbox\\Laravel\\Database\\QuerylogServiceProvider"
+            ],
+            "aliases": {
+            }
+        }
+    },
+    "require-dev": {
+        "laravel/laravel": "^7.0"
+    }
+}
