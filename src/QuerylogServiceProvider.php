@@ -2,6 +2,7 @@
 namespace Chatbox\Laravel\Database;
 
 use Illuminate\Database\Events\QueryExecuted;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
 
 class QuerylogServiceProvider extends ServiceProvider {
@@ -12,7 +13,7 @@ class QuerylogServiceProvider extends ServiceProvider {
 
             DB::listen(function (QueryExecuted $query) {
                 logger()->debug($query->sql);
-//                logger()->debug(json_encode($query->bindings));
+                logger()->debug(json_encode($query->bindings));
             });
         }
     }
